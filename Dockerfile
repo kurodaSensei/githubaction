@@ -1,13 +1,10 @@
 FROM node:alpine
 
 # Instalar Git
-RUN apk add --no-cache git ruby ruby-dev ruby-etc build-base
+RUN apk add  git ruby ruby-dev ruby-etc build-base
 
-#Instalar bundler ruby dependency
-RUN gem install bundler
-
-# Instalar Shopify CLI y Shopify Theme Check 
-RUN npm install --no-package-lock --no-save @shopify/cli @shopify/theme
+# Install the theme-check Ruby gem
+RUN gem install theme-check
 
 # Copiar el script de entrada y el archivo de Node.js al contenedor
 COPY entrypoint.sh /entrypoint.sh
