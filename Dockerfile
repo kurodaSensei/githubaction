@@ -4,7 +4,7 @@ FROM node:alpine
 RUN apk add --no-cache git
 
 # Instalar Shopify CLI y Shopify Theme Check globalmente
-RUN npm install -g @shopify/cli @shopify/theme-check
+RUN npm install -g @shopify/cli @shopify/theme
 
 # Copiar el script de entrada y el archivo de Node.js al contenedor
 COPY entrypoint.sh /entrypoint.sh
