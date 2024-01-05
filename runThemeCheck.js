@@ -1,4 +1,3 @@
-const { exec } = require('child_process');
 const { getExecOutput } = require('@actions/exec');
 const cwd = process.cwd();
 async function runChecksJson() {
