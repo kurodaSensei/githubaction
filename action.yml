@@ -1,0 +1,17 @@
+name: 'Test Action Check'
+description: ''
+author: 'KurodaSensei'
+inputs:
+  github_token:
+    description: 'GITHUB_TOKEN'
+    default: '${{ github.token }}'
+  workdir:
+    description: 'Working directory relative to the root directory.'
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+# TODO: update branding if you want.
+branding:
+  icon: 'check'
+  color: 'blue'
