@@ -8,8 +8,8 @@ fi
 
 # Exportar GITHUB_TOKEN desde las variables de entorno de GitHub Actions
 export GITHUB_TOKEN="${INPUT_GITHUB_TOKEN}"
-RUN npm install
-RUN npm install --no-package-lock --no-save @shopify/cli @shopify/theme
+npm install
+npm install --no-package-lock --no-save @shopify/cli @shopify/theme
 # Ejecutar el script de Node.js
 node /runThemeCheck.js
 
