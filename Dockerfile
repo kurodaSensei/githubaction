@@ -1,7 +1,7 @@
 FROM node:alpine
 
 # Instalar Git
-RUN apk add --no-cache git
+RUN apk add --no-cache git ruby ruby-dev ruby-etc build-base
 
 # Instalar Shopify CLI y Shopify Theme Check globalmente
 RUN npm install -g @shopify/cli @shopify/theme
